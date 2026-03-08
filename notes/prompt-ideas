@@ -1,0 +1,780 @@
+I need to upload 3 index.html files that are hyperlinked to each other as:
+- User -> bitcoinhypertoken-ai.web.app/ -> bitcoinhypertoken-ai.web.app/app/ -> https://bitcoinhypertoken-ai.web.app/app/load.html
+
+I have placed relevant sub-directories (bitcoinhypertoken_ai.web.app,
+bitcoinhypertoken_ai.web.app-app, and bitcoinhypertoken_ai.web.app-app-load)
+in a directory called btc-hyp-tok-ai-web-app. Help me setup the project to be
+ready for deployment on vercel and show me the final project structure after
+removing redundancies while ensniring the project setup is fully correct.
+
+This is the tree with btc-hyp-tok-ai-web-app as the github repo and root
+directory.
+
+btc-hyp-tok-ai-web-app:
+```
+.
+├── README.md
+├── bitcoinhypertoken_ai.web.app
+│   ├── _DataURI
+│   │   ├── data.02d42aeb8e1db8.txt
+│   │   ├── data.03bb1e7ee7c6e.txt
+│   │   ├── data.07c0217f18cdc.txt
+│   │   ├── data.096e12aadb4868.txt
+│   │   ├── data.0ff930e17fb798.txt
+│   │   ├── data.18c9af3ea6e37.txt
+│   │   ├── data.193472ac5d2bc8.txt
+│   │   ├── data.1ee8976be1d5e8.txt
+│   │   ├── data.1febbfc61ab0c8.txt
+│   │   ├── data.22574f492792a.txt
+│   │   ├── data.2ba691c1b226d8.txt
+│   │   ├── data.35cbcc39960368.txt
+│   │   ├── data.3b015fe0cfb3e.txt
+│   │   ├── data.421b734e3ace.txt
+│   │   ├── data.44396aad8a7bb8.txt
+│   │   ├── data.4ba278a5ed0fd.txt
+│   │   ├── data.57432ca8823158.txt
+│   │   ├── data.58fcf59611df48.txt
+│   │   ├── data.693c2d43785568.txt
+│   │   ├── data.6dace16846a7a8.txt
+│   │   ├── data.719e18038b3728.txt
+│   │   ├── data.7aea097d63a73.txt
+│   │   ├── data.7f53efeb7a444.txt
+│   │   ├── data.8b7643332929.txt
+│   │   ├── data.9162a87da438c8.txt
+│   │   ├── data.92916e540de5d.txt
+│   │   ├── data.950f92d6fb33f8.txt
+│   │   ├── data.9c41bd3cef43c8.txt
+│   │   ├── data.9d858dad351e28.txt
+│   │   ├── data.a29c7f7a799cc8.txt
+│   │   ├── data.ac6b955b87b4e8.txt
+│   │   ├── data.b16b5a76751998.txt
+│   │   ├── data.c1f52705f2f73.txt
+│   │   ├── data.c94fae09831cb8.txt
+│   │   ├── data.ce4b6311f82b48.txt
+│   │   ├── data.ceb7fa72b6486.txt
+│   │   ├── data.d3eded213357a8.txt
+│   │   ├── data.da979401c92bd.txt
+│   │   ├── data.e61bf707d4dca8.txt
+│   │   ├── data.e7cdcb9f3805d.txt
+│   │   ├── data.e7dd5420cf593.txt
+│   │   ├── data.e8543d0850d9c.txt
+│   │   ├── data.e99b0fdddd9fd8.txt
+│   │   ├── data.ef70e889fa8a1.txt
+│   │   ├── data.f03a131420ff68.txt
+│   │   ├── data.f1e873956a54a8.txt
+│   │   ├── data.f57b73a6be1148.txt
+│   │   ├── data.f7aff456e25e58.txt
+│   │   ├── data.f96079fac0d648.txt
+│   │   ├── data.fc314428d0dfc8.txt
+│   │   ├── data.font.woff2.545927ecda66b.txt
+│   │   ├── data.font.woff2.82a5adc2e1db58.txt
+│   │   ├── data.image.gif.07379a23d8a388.txt
+│   │   ├── data.image.gif.08c4abd088d14.txt
+│   │   ├── data.image.gif.2b00b5dd180e3.txt
+│   │   ├── data.image.gif.30f428fd275dc.txt
+│   │   ├── data.image.gif.448fd48c0b0d68.txt
+│   │   ├── data.image.gif.538687b9b76558.txt
+│   │   ├── data.image.gif.816c07c179c9d.txt
+│   │   ├── data.image.gif.d77ea197f3c188.txt
+│   │   ├── data.image.png.f7cad2f0df9be.txt
+│   │   ├── data.image.svg.xml.12994cd2102ab8.txt
+│   │   ├── data.image.svg.xml.26b7765417b62.txt
+│   │   ├── data.image.svg.xml.4317564e66f45.txt
+│   │   ├── data.image.svg.xml.43406a31a95cf.txt
+│   │   ├── data.image.svg.xml.49c1920759a1c8.txt
+│   │   ├── data.image.svg.xml.581ab6597c2df.txt
+│   │   ├── data.image.svg.xml.5d6c74948b8058.txt
+│   │   ├── data.image.svg.xml.61a1b3a67d0a48.txt
+│   │   ├── data.image.svg.xml.720debed7ad6.txt
+│   │   ├── data.image.svg.xml.742508ffc150b8.txt
+│   │   ├── data.image.svg.xml.78da87e22be5b8.txt
+│   │   ├── data.image.svg.xml.97431bd808f64.txt
+│   │   ├── data.image.svg.xml.a4e113582b2bd8.txt
+│   │   ├── data.image.svg.xml.a6ac8908126a38.txt
+│   │   ├── data.image.svg.xml.a997addbc857.txt
+│   │   ├── data.image.svg.xml.c41f3cc744a608.txt
+│   │   ├── data.image.svg.xml.c5dc29a76dcf18.txt
+│   │   ├── data.image.svg.xml.cd93fe77fe0948.txt
+│   │   ├── data.image.svg.xml.d38c727698d18.txt
+│   │   ├── data.image.svg.xml.e336f76c45d208.txt
+│   │   ├── data.image.svg.xml.f224add6c5bce8.txt
+│   │   ├── data.image.webp.106283591e2868.txt
+│   │   ├── data.image.webp.19618f2205f048.txt
+│   │   ├── data.image.webp.210e53a18b4a28.txt
+│   │   ├── data.image.webp.234ed08dad8b68.txt
+│   │   ├── data.image.webp.37bbbfb4018d88.txt
+│   │   ├── data.image.webp.382692d624082.txt
+│   │   ├── data.image.webp.3c13d4da0293c.txt
+│   │   ├── data.image.webp.4446319fdbdc68.txt
+│   │   ├── data.image.webp.49021aa8fc91f.txt
+│   │   ├── data.image.webp.4cf0d0eddfef88.txt
+│   │   ├── data.image.webp.4eb5c361d09bc.txt
+│   │   ├── data.image.webp.4f1867ed6dbf78.txt
+│   │   ├── data.image.webp.4fb081a494151.txt
+│   │   ├── data.image.webp.4fb9f7c3477ed.txt
+│   │   ├── data.image.webp.5db3908ab487e.txt
+│   │   ├── data.image.webp.60810faecde928.txt
+│   │   ├── data.image.webp.62cd5005c81538.txt
+│   │   ├── data.image.webp.70b17f9a4dc6b8.txt
+│   │   ├── data.image.webp.87183230764dc8.txt
+│   │   ├── data.image.webp.89571e8167af18.txt
+│   │   ├── data.image.webp.8fd74fedb38b7.txt
+│   │   ├── data.image.webp.91081f2e30226.txt
+│   │   ├── data.image.webp.9ab0b37535d98.txt
+│   │   ├── data.image.webp.9f2aff12ab5ba.txt
+│   │   ├── data.image.webp.a2c20709fe41a.txt
+│   │   ├── data.image.webp.b5bb2a681a3778.txt
+│   │   ├── data.image.webp.bdda69e858c828.txt
+│   │   ├── data.image.webp.c21fb9ced2946.txt
+│   │   ├── data.image.webp.c7a0315342a5f8.txt
+│   │   ├── data.image.webp.ca5e9315ba474.txt
+│   │   ├── data.image.webp.cee2e73cc848a8.txt
+│   │   ├── data.image.webp.e4e30a7c4ceb88.txt
+│   │   ├── data.image.webp.e70b782242e2c.txt
+│   │   ├── data.image.webp.e9a6a38eac08c8.txt
+│   │   ├── data.image.webp.f4438ae47ecd08.txt
+│   │   ├── data.image.webp.f720e3a5eb7c58.txt
+│   │   ├── data.image.webp.fbeba196c5c9a.txt
+│   │   ├── data.image.webp.feaf4a358d3e78.txt
+│   │   └── data.image.webp.fed52687dc6218.txt
+│   ├── bitcoinhypertoken-ai.web.app
+│   │   └── index.html
+│   └── cdn.aitopia.ai
+│       └── storages
+│           └── 0
+│               └── ai_logo
+│                   └── svg
+│                       └── logo.svg
+├── bitcoinhypertoken_ai.web.app-app
+│   ├── _DataURI
+│   │   ├── data.00b9f20bcc6688.txt
+│   │   ├── data.00ed599d8797d.txt
+│   │   ├── data.07b5f518fd6b8.txt
+│   │   ├── data.08cf853f5518f.txt
+│   │   ├── data.094267d0efb21.txt
+│   │   ├── data.0b0288d40556e.txt
+│   │   ├── data.10d26352a5989.txt
+│   │   ├── data.11020659b6ffe8.txt
+│   │   ├── data.176309473381c.txt
+│   │   ├── data.24a2bd5e346c5.txt
+│   │   ├── data.29b417976b879.txt
+│   │   ├── data.30c0e8bd012b48.txt
+│   │   ├── data.33100c72478cd8.txt
+│   │   ├── data.369112440902a.txt
+│   │   ├── data.507ac264834ee.txt
+│   │   ├── data.512b111ecd0fb8.txt
+│   │   ├── data.57e5a6a6786a9.txt
+│   │   ├── data.591afdd4daba38.txt
+│   │   ├── data.5b96ed30e6d6a8.txt
+│   │   ├── data.66e2d4db5e42c.txt
+│   │   ├── data.6d921b1b05d23.txt
+│   │   ├── data.6dbfd65c56a118.txt
+│   │   ├── data.6f301dff477338.txt
+│   │   ├── data.7060cc92143c48.txt
+│   │   ├── data.7e69616f2bf78.txt
+│   │   ├── data.865ecf16dcfee.txt
+│   │   ├── data.88a1e680b563c8.txt
+│   │   ├── data.916153629ff9b8.txt
+│   │   ├── data.98e65df5474268.txt
+│   │   ├── data.9a7a2256567588.txt
+│   │   ├── data.9d3f7658531d.txt
+│   │   ├── data.a0a4481a058708.txt
+│   │   ├── data.a2d914313ed3d8.txt
+│   │   ├── data.a8388b8f9f5268.txt
+│   │   ├── data.b5299f230d20e.txt
+│   │   ├── data.b89849128c8f98.txt
+│   │   ├── data.b9d7eb7af4cbb.txt
+│   │   ├── data.badace5061c608.txt
+│   │   ├── data.bc0c733d2fbae8.txt
+│   │   ├── data.bd88cf00b70b9.txt
+│   │   ├── data.c1ed71f471a5c8.txt
+│   │   ├── data.c898b99fc7fa28.txt
+│   │   ├── data.d1e62b28f57e58.txt
+│   │   ├── data.d7b3303c5e7948.txt
+│   │   ├── data.dd365e256146a8.txt
+│   │   ├── data.e68d04dcdeb168.txt
+│   │   ├── data.ec02b196fa40b.txt
+│   │   ├── data.f8b3da1040343.txt
+│   │   ├── data.fbc1c155403c2.txt
+│   │   ├── data.fc96da2cc8c4c8.txt
+│   │   ├── data.image.png.6194ce0c75402.txt
+│   │   ├── data.image.png.9e4cc3735a461.txt
+│   │   ├── data.image.png.c7d12b265a9648.txt
+│   │   └── data.image.svg.xml.057fe99ecc6a4.txt
+│   ├── bitcoinhypertoken-ai.web.app
+│   │   ├── app
+│   │   │   ├── assets
+│   │   │   │   ├── 0b415a746fb9ee99cce155c2ceca0c6f6061b1dbca2d722b3ba16381d0562150.jpeg
+│   │   │   │   ├── 0x0.png
+│   │   │   │   ├── 10903.png
+│   │   │   │   ├── 138f51c8d00ac7b9ac9d8dc75344d096a7dfe370a568aa167eabc0a21830ed98.jpeg
+│   │   │   │   ├── 1433894569.png
+│   │   │   │   ├── 1581439195205.jpg
+│   │   │   │   ├── 19ad8334f0f034f4176a95722b5746b539b47b37ce17a5abde4755956d05d44c.jpeg
+│   │   │   │   ├── 1_N6Uvv2QMQGqQubnGP1tGig.png
+│   │   │   │   ├── 1ae92b26df02f0abca6304df07debccd18262fdf5fe82daa81593582dac9a369.jpeg
+│   │   │   │   ├── 2.6 animate.css.css
+│   │   │   │   ├── 20459438007b75f4f4acb98bf29aa3b800550309646d375da5fd4aac6c2a2c66.jpeg
+│   │   │   │   ├── 2772.png
+│   │   │   │   ├── 28189800.html
+│   │   │   │   ├── 28931745.png
+│   │   │   │   ├── 44049579.html
+│   │   │   │   ├── 49746116.html
+│   │   │   │   ├── 512x512bb(1).jpg
+│   │   │   │   ├── 512x512bb(2).jpg
+│   │   │   │   ├── 512x512bb.jpg
+│   │   │   │   ├── 54043975-b6cdb800-4182-11e9-83bd-0cd2eb757c6e.png
+│   │   │   │   ├── 5DxVDK36_400x400.png
+│   │   │   │   ├── 6323b69954bc41ff9409f033_public.png
+│   │   │   │   ├── 7674bb4e353bf52886768a3ddc2a4562ce2f4191c80831291218ebd90f5f5e26.jpeg
+│   │   │   │   ├── 76861339.png
+│   │   │   │   ├── 8EXrk57o_400x400.jpg
+│   │   │   │   ├── Coinbaselogo_Supplied_250x250-2.png
+│   │   │   │   ├── Electrum.jpg
+│   │   │   │   ├── LOGO-KEYRING-PRO.png
+│   │   │   │   ├── Ledger-nano-logo.png
+│   │   │   │   ├── MetaMask-icon-Fox.svg
+│   │   │   │   ├── MyTonWallet.jpg
+│   │   │   │   ├── Solflarewallet.jpg
+│   │   │   │   ├── Sparkpoint-wallet-logo.png
+│   │   │   │   ├── TonHubWallet.jpg
+│   │   │   │   ├── Tonkeeperwallet.jpg
+│   │   │   │   ├── Uniswap-Logo.webp
+│   │   │   │   ├── Xverse.jpg
+│   │   │   │   ├── aave-aave-logo.png
+│   │   │   │   ├── asigna.jpg
+│   │   │   │   ├── bestwallet.jpg
+│   │   │   │   ├── bootstrap.min(1).css
+│   │   │   │   ├── brd.jpg
+│   │   │   │   ├── cosmos.png
+│   │   │   │   ├── dceb063851b1833cbb209e3717a0a0b06bf3fb500fe9db8cd3a553e4b1d02137.jpeg
+│   │   │   │   ├── dd8ee41915d967e547c80266e883d77ee808427405f4e8026a85ac1308104221.jpeg
+│   │   │   │   ├── exodus.png
+│   │   │   │   ├── f2436c67184f158d1beda5df53298ee84abfc367581e4505134b5bcf5f46697d.jpeg
+│   │   │   │   ├── images(1).html
+│   │   │   │   ├── images(2).png
+│   │   │   │   ├── images.html
+│   │   │   │   ├── jquery.counterup.min.js.download
+│   │   │   │   ├── jquery.waypoints.min.js.download
+│   │   │   │   ├── leather.svg
+│   │   │   │   ├── lg(1).html
+│   │   │   │   ├── lg(2).html
+│   │   │   │   ├── lg(3).html
+│   │   │   │   ├── lg(4).html
+│   │   │   │   ├── lg(5).html
+│   │   │   │   ├── lg(7).html
+│   │   │   │   ├── lg.png
+│   │   │   │   ├── m92jEcPI_400x400.jpg
+│   │   │   │   ├── magic_eden.png
+│   │   │   │   ├── main.css
+│   │   │   │   ├── ofbdehdu4sju07vlltgf.html
+│   │   │   │   ├── okx.png
+│   │   │   │   ├── phantom.jpeg
+│   │   │   │   ├── portis_logo_dribbble.png
+│   │   │   │   ├── rtDOqMXY_400x400.jpg
+│   │   │   │   ├── saitama.png
+│   │   │   │   ├── script.js.download
+│   │   │   │   ├── solana-sol-logo.png
+│   │   │   │   ├── terra.png
+│   │   │   │   ├── tron-trx-logo.png
+│   │   │   │   ├── trustvault.png
+│   │   │   │   ├── trustwallet.png
+│   │   │   │   ├── unisat.jpg
+│   │   │   │   ├── unnamed(1).png
+│   │   │   │   ├── unnamed(10).png
+│   │   │   │   ├── unnamed(11).png
+│   │   │   │   ├── unnamed(12).png
+│   │   │   │   ├── unnamed(13).png
+│   │   │   │   ├── unnamed(2).png
+│   │   │   │   ├── unnamed(3).png
+│   │   │   │   ├── unnamed(4).png
+│   │   │   │   ├── unnamed(5).png
+│   │   │   │   ├── unnamed(6).png
+│   │   │   │   ├── unnamed(7).png
+│   │   │   │   ├── unnamed(8).png
+│   │   │   │   ├── unnamed(9).png
+│   │   │   │   ├── unnamed.png
+│   │   │   │   ├── walletconnect.webp
+│   │   │   │   ├── walletpage.css
+│   │   │   │   ├── wow.min.js.download
+│   │   │   │   └── xaman.jpg
+│   │   │   ├── index.html
+│   │   │   └── slide-bg.webp
+│   │   └── favicon.ico
+│   ├── cdn.aitopia.ai
+│   │   └── storages
+│   │       └── 0
+│   │           └── ai_logo
+│   │               └── svg
+│   │                   └── logo.svg
+│   ├── cdn.jsdelivr.net
+│   │   └── npm
+│   │       ├── @popperjs
+│   │       │   └── core@2.10.2
+│   │       │       ├── dist
+│   │       │       │   └── umd
+│   │       │       │       └── popper.min.js
+│   │       │       └── src
+│   │       │           ├── createPopper.js
+│   │       │           ├── dom-utils
+│   │       │           │   ├── contains.js
+│   │       │           │   ├── getBoundingClientRect.js
+│   │       │           │   ├── getClippingRect.js
+│   │       │           │   ├── getCompositeRect.js
+│   │       │           │   ├── getComputedStyle.js
+│   │       │           │   ├── getDocumentElement.js
+│   │       │           │   ├── getDocumentRect.js
+│   │       │           │   ├── getHTMLElementScroll.js
+│   │       │           │   ├── getLayoutRect.js
+│   │       │           │   ├── getNodeName.js
+│   │       │           │   ├── getNodeScroll.js
+│   │       │           │   ├── getOffsetParent.js
+│   │       │           │   ├── getParentNode.js
+│   │       │           │   ├── getScrollParent.js
+│   │       │           │   ├── getViewportRect.js
+│   │       │           │   ├── getWindow.js
+│   │       │           │   ├── getWindowScroll.js
+│   │       │           │   ├── getWindowScrollBarX.js
+│   │       │           │   ├── instanceOf.js
+│   │       │           │   ├── isScrollParent.js
+│   │       │           │   ├── isTableElement.js
+│   │       │           │   └── listScrollParents.js
+│   │       │           ├── enums.js
+│   │       │           ├── modifiers
+│   │       │           │   ├── applyStyles.js
+│   │       │           │   ├── arrow.js
+│   │       │           │   ├── computeStyles.js
+│   │       │           │   ├── eventListeners.js
+│   │       │           │   ├── flip.js
+│   │       │           │   ├── hide.js
+│   │       │           │   ├── offset.js
+│   │       │           │   ├── popperOffsets.js
+│   │       │           │   └── preventOverflow.js
+│   │       │           ├── popper-lite.js
+│   │       │           ├── popper.js
+│   │       │           └── utils
+│   │       │               ├── computeAutoPlacement.js
+│   │       │               ├── computeOffsets.js
+│   │       │               ├── debounce.js
+│   │       │               ├── detectOverflow.js
+│   │       │               ├── expandToHashMap.js
+│   │       │               ├── getAltAxis.js
+│   │       │               ├── getBasePlacement.js
+│   │       │               ├── getFreshSideObject.js
+│   │       │               ├── getMainAxisFromPlacement.js
+│   │       │               ├── getOppositePlacement.js
+│   │       │               ├── getOppositeVariationPlacement.js
+│   │       │               ├── getVariation.js
+│   │       │               ├── math.js
+│   │       │               ├── mergeByName.js
+│   │       │               ├── mergePaddingObject.js
+│   │       │               ├── orderModifiers.js
+│   │       │               ├── rectToClientRect.js
+│   │       │               └── within.js
+│   │       └── bootstrap@5.1.3
+│   │           ├── dist
+│   │           │   ├── css
+│   │           │   │   ├── bootstrap.min.css
+│   │           │   │   └── dist
+│   │           │   │       └── css
+│   │           │   │           └── bootstrap.css
+│   │           │   └── js
+│   │           │       └── bootstrap.min.js
+│   │           ├── js
+│   │           │   ├── index.umd.js
+│   │           │   └── src
+│   │           │       ├── alert.js
+│   │           │       ├── base-component.js
+│   │           │       ├── button.js
+│   │           │       ├── carousel.js
+│   │           │       ├── collapse.js
+│   │           │       ├── dom
+│   │           │       │   ├── data.js
+│   │           │       │   ├── event-handler.js
+│   │           │       │   ├── manipulator.js
+│   │           │       │   └── selector-engine.js
+│   │           │       ├── dropdown.js
+│   │           │       ├── modal.js
+│   │           │       ├── offcanvas.js
+│   │           │       ├── popover.js
+│   │           │       ├── scrollspy.js
+│   │           │       ├── tab.js
+│   │           │       ├── toast.js
+│   │           │       ├── tooltip.js
+│   │           │       └── util
+│   │           │           ├── backdrop.js
+│   │           │           ├── component-functions.js
+│   │           │           ├── focustrap.js
+│   │           │           ├── index.js
+│   │           │           ├── sanitizer.js
+│   │           │           └── scrollbar.js
+│   │           └── scss
+│   │               ├── _accordion.scss
+│   │               ├── _alert.scss
+│   │               ├── _badge.scss
+│   │               ├── _breadcrumb.scss
+│   │               ├── _button-group.scss
+│   │               ├── _buttons.scss
+│   │               ├── _card.scss
+│   │               ├── _carousel.scss
+│   │               ├── _close.scss
+│   │               ├── _containers.scss
+│   │               ├── _dropdown.scss
+│   │               ├── _grid.scss
+│   │               ├── _images.scss
+│   │               ├── _list-group.scss
+│   │               ├── _modal.scss
+│   │               ├── _nav.scss
+│   │               ├── _navbar.scss
+│   │               ├── _offcanvas.scss
+│   │               ├── _pagination.scss
+│   │               ├── _placeholders.scss
+│   │               ├── _popover.scss
+│   │               ├── _progress.scss
+│   │               ├── _reboot.scss
+│   │               ├── _root.scss
+│   │               ├── _spinners.scss
+│   │               ├── _tables.scss
+│   │               ├── _toasts.scss
+│   │               ├── _tooltip.scss
+│   │               ├── _transitions.scss
+│   │               ├── _type.scss
+│   │               ├── bootstrap.scss
+│   │               ├── forms
+│   │               │   ├── _floating-labels.scss
+│   │               │   ├── _form-check.scss
+│   │               │   ├── _form-control.scss
+│   │               │   ├── _form-range.scss
+│   │               │   ├── _form-select.scss
+│   │               │   ├── _form-text.scss
+│   │               │   ├── _input-group.scss
+│   │               │   └── _labels.scss
+│   │               ├── helpers
+│   │               │   ├── _colored-links.scss
+│   │               │   ├── _position.scss
+│   │               │   ├── _ratio.scss
+│   │               │   ├── _stacks.scss
+│   │               │   ├── _stretched-link.scss
+│   │               │   ├── _text-truncation.scss
+│   │               │   ├── _visually-hidden.scss
+│   │               │   └── _vr.scss
+│   │               ├── mixins
+│   │               │   ├── _alert.scss
+│   │               │   ├── _backdrop.scss
+│   │               │   ├── _border-radius.scss
+│   │               │   ├── _breakpoints.scss
+│   │               │   ├── _buttons.scss
+│   │               │   ├── _caret.scss
+│   │               │   ├── _clearfix.scss
+│   │               │   ├── _container.scss
+│   │               │   ├── _forms.scss
+│   │               │   ├── _gradients.scss
+│   │               │   ├── _grid.scss
+│   │               │   ├── _image.scss
+│   │               │   ├── _list-group.scss
+│   │               │   ├── _lists.scss
+│   │               │   ├── _pagination.scss
+│   │               │   ├── _reset-text.scss
+│   │               │   ├── _table-variants.scss
+│   │               │   ├── _text-truncate.scss
+│   │               │   ├── _transition.scss
+│   │               │   ├── _utilities.scss
+│   │               │   └── _visually-hidden.scss
+│   │               ├── utilities
+│   │               │   └── _api.scss
+│   │               └── vendor
+│   │                   └── _rfs.scss
+│   ├── cdn.rocketx.exchange
+│   │   └── pd135zq
+│   │       └── images
+│   │           ├── blockchain
+│   │           │   └── metis.svg
+│   │           └── icons-original
+│   │               ├── BOBA.webp
+│   │               ├── Blast.webp
+│   │               ├── KCC.svg
+│   │               ├── ada.webp
+│   │               ├── akash.png
+│   │               ├── algo.webp
+│   │               ├── alph.webp
+│   │               ├── amb.webp
+│   │               ├── andr.webp
+│   │               ├── aptos.webp
+│   │               ├── ar.webp
+│   │               ├── arbitrum.svg
+│   │               ├── arbitrumNova.webp
+│   │               ├── astr.webp
+│   │               ├── aurora.svg
+│   │               ├── avail.webp
+│   │               ├── avax.png
+│   │               ├── axelar.png
+│   │               ├── azero.webp
+│   │               ├── bandchain.png
+│   │               ├── base.webp
+│   │               ├── bb.webp
+│   │               ├── bitcanna.png
+│   │               ├── bitcoin-cash.png
+│   │               ├── bitgert.webp
+│   │               ├── bitsong.png
+│   │               ├── bnb.svg
+│   │               ├── boba.svg
+│   │               ├── brock.webp
+│   │               ├── bsv.webp
+│   │               ├── celo.png
+│   │               ├── cfx.webp
+│   │               ├── chihuahua.png
+│   │               ├── comai.webp
+│   │               ├── comdex.png
+│   │               ├── core-dao.svg
+│   │               ├── cosmos.svg
+│   │               ├── cronos.svg
+│   │               ├── crypto-org.png
+│   │               ├── cspr.webp
+│   │               ├── cube.png
+│   │               ├── dag.webp
+│   │               ├── dash.webp
+│   │               ├── desmos.png
+│   │               ├── doge.png
+│   │               ├── dogeevm.webp
+│   │               ├── dor.webp
+│   │               ├── dot.webp
+│   │               ├── dydx.webp
+│   │               ├── dym.webp
+│   │               ├── egld.webp
+│   │               ├── emoney.svg
+│   │               ├── enjin.webp
+│   │               ├── eos.webp
+│   │               ├── etc.png
+│   │               ├── ethereum-pow.png
+│   │               ├── etn.webp
+│   │               ├── evmos.png
+│   │               ├── ewt.webp
+│   │               ├── fantom.svg
+│   │               ├── fetch.png
+│   │               ├── fil.webp
+│   │               ├── flow.webp
+│   │               ├── flr.webp
+│   │               ├── flux.webp
+│   │               ├── fuse.png
+│   │               ├── gnosis.png
+│   │               ├── hbar.webp
+│   │               ├── heco.png
+│   │               ├── hive.webp
+│   │               ├── htr.webp
+│   │               ├── icp.webp
+│   │               ├── injective.png
+│   │               ├── iris.png
+│   │               ├── juno.png
+│   │               ├── kaspa.webp
+│   │               ├── kava.webp
+│   │               ├── ki.png
+│   │               ├── konstellation.png
+│   │               ├── ksm.webp
+│   │               ├── kujira.webp
+│   │               ├── linea.webp
+│   │               ├── litecoin.svg
+│   │               ├── lum.png
+│   │               ├── luna.webp
+│   │               ├── lyx.webp
+│   │               ├── manta.webp
+│   │               ├── mapo.webp
+│   │               ├── mars.svg
+│   │               ├── matic-token-icon.png
+│   │               ├── merl.webp
+│   │               ├── mina.webp
+│   │               ├── mnt.webp
+│   │               ├── mode.webp
+│   │               ├── moonbeam.webp
+│   │               ├── moonriver.webp
+│   │               ├── mpc.webp
+│   │               ├── mtr.webp
+│   │               ├── nano.webp
+│   │               ├── near.webp
+│   │               ├── nexa.webp
+│   │               ├── nibi.webp
+│   │               ├── nrk.webp
+│   │               ├── ntrn.webp
+│   │               ├── okx.png
+│   │               ├── onomy.png
+│   │               ├── optimism.svg
+│   │               ├── orai.webp
+│   │               ├── persistence.png
+│   │               ├── phantasma.webp
+│   │               ├── pokt.webp
+│   │               ├── regen.png
+│   │               ├── rei.webp
+│   │               ├── ron.webp
+│   │               ├── rose.webp
+│   │               ├── rsk.webp
+│   │               ├── rvn.webp
+│   │               ├── saga.webp
+│   │               ├── scroll.webp
+│   │               ├── secret.png
+│   │               ├── sei.webp
+│   │               ├── sentinel.png
+│   │               ├── sif.png
+│   │               ├── space.webp
+│   │               ├── stacks.png
+│   │               ├── stargaze.png
+│   │               ├── starknet.webp
+│   │               ├── starname.png
+│   │               ├── stride.png
+│   │               ├── sui.png
+│   │               ├── sys.webp
+│   │               ├── taiko.webp
+│   │               ├── tao.webp
+│   │               ├── tara.webp
+│   │               ├── telos.webp
+│   │               ├── tenet.webp
+│   │               ├── theta.webp
+│   │               ├── thorchain.svg
+│   │               ├── tia.webp
+│   │               ├── tomo.webp
+│   │               ├── ton.webp
+│   │               ├── umee.png
+│   │               ├── venom.webp
+│   │               ├── wan.webp
+│   │               ├── wemix.webp
+│   │               ├── wtc.webp
+│   │               ├── xdc.png
+│   │               ├── xec.webp
+│   │               ├── xlm.webp
+│   │               ├── xmr.webp
+│   │               ├── xpla.webp
+│   │               ├── xrd.webp
+│   │               ├── xrp.webp
+│   │               ├── xtz.webp
+│   │               ├── zeta.webp
+│   │               ├── zkl.webp
+│   │               └── zksync-era.png
+│   ├── code.jquery.com
+│   │   └── jquery-3.6.0.min.js
+│   ├── extensions.aitopia.ai
+│   │   └── extensions
+│   │       └── app
+│   │           └── get_key.html
+│   ├── fonts.googleapis.com
+│   │   ├── css2-608630ec4b8418.css
+│   │   └── css2.css
+│   ├── fonts.gstatic.com
+│   │   └── s
+│   │       └── poppins
+│   │           └── v24
+│   │               ├── pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2
+│   │               ├── pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2
+│   │               └── pxiEyp8kv8JHgFVrJJfecg.woff2
+│   ├── icons.llamao.fi
+│   │   └── icons
+│   │       └── chains
+│   │           └── rsz_zircuit.jpg
+│   ├── ka-f.fontawesome.com
+│   │   └── releases
+│   │       └── v5.15.4
+│   │           └── css
+│   │               ├── free-v4-font-face.min.css
+│   │               ├── free-v4-shims.min.css
+│   │               └── free.min.css
+│   └── kit.fontawesome.com
+│       └── 78d167673c.js
+├── bitcoinhypertoken_ai.web.app-app-load
+│   ├── _DataURI
+│   │   ├── data.0412183080e7b8.txt
+│   │   ├── data.0651b8b46df308.txt
+│   │   ├── data.0685c3ca8a67e.txt
+│   │   ├── data.075bf5fbbfda88.txt
+│   │   ├── data.079c9855776b58.txt
+│   │   ├── data.264adfeee9f66.txt
+│   │   ├── data.2b6d009354fa38.txt
+│   │   ├── data.2cc5c18d4aff.txt
+│   │   ├── data.3e7b6c6caf7f58.txt
+│   │   ├── data.3fed9d4c46db88.txt
+│   │   ├── data.44a4afbe2de81.txt
+│   │   ├── data.4c7ddb93f72538.txt
+│   │   ├── data.4d31d1168bfdd8.txt
+│   │   ├── data.4d9689e545bd7.txt
+│   │   ├── data.590ec09ad00e18.txt
+│   │   ├── data.5dfac5ccb1183.txt
+│   │   ├── data.6019897a6e2eb.txt
+│   │   ├── data.6605f187e5bf8.txt
+│   │   ├── data.7270b19ac990f.txt
+│   │   ├── data.79c27c9dc45d1.txt
+│   │   ├── data.7aedabdb596ec8.txt
+│   │   ├── data.85af29e7565b88.txt
+│   │   ├── data.8dc963693675a8.txt
+│   │   ├── data.93fcb40b329ca.txt
+│   │   ├── data.959f51b14d5b9.txt
+│   │   ├── data.98b8ffd0a776e.txt
+│   │   ├── data.994b0e54291728.txt
+│   │   ├── data.9cc535281ad668.txt
+│   │   ├── data.9eff4e8c393138.txt
+│   │   ├── data.9fa5a9e9036b2.txt
+│   │   ├── data.a344b07d6271d.txt
+│   │   ├── data.aeb980f877cbd8.txt
+│   │   ├── data.b1b13a58ed0c88.txt
+│   │   ├── data.b8269bf07a6c98.txt
+│   │   ├── data.b8edae0fe71aa8.txt
+│   │   ├── data.b940da435ddc9.txt
+│   │   ├── data.bdf90d342dac28.txt
+│   │   ├── data.bf235f65572788.txt
+│   │   ├── data.c01084a098561.txt
+│   │   ├── data.ccd21413070868.txt
+│   │   ├── data.ccf8f3124e264.txt
+│   │   ├── data.cf880e45828ea.txt
+│   │   ├── data.d5f41b55f6694.txt
+│   │   ├── data.df797a55d52c2.txt
+│   │   ├── data.e22a374d358518.txt
+│   │   ├── data.e331583441c8e8.txt
+│   │   ├── data.ef11d601e0927.txt
+│   │   ├── data.ef870a037e49c.txt
+│   │   ├── data.fac45b30e13b88.txt
+│   │   ├── data.fd15d0b5c6577.txt
+│   │   ├── data.image.png.90cc431fe0cb58.txt
+│   │   └── data.image.svg.xml.acc800250e9b58.txt
+│   ├── bitcoinhypertoken-ai.web.app
+│   │   └── app
+│   │       ├── assets
+│   │       │   ├── C.css
+│   │       │   ├── css2.css
+│   │       │   ├── font-awesome.min.css
+│   │       │   ├── ionicons.min.css
+│   │       │   └── jquery.min.js.download
+│   │       ├── load.gif
+│   │       ├── load.html
+│   │       └── slide-bg.webp
+│   ├── cdn.aitopia.ai
+│   │   └── storages
+│   │       └── 0
+│   │           └── ai_logo
+│   │               └── svg
+│   │                   └── logo.svg
+│   ├── cdn.rocketx.exchange
+│   │   └── pd135zq
+│   │       └── images
+│   │           └── icons-original
+│   │               └── matic-token-icon.png
+│   ├── cdnjs.cloudflare.com
+│   │   └── ajax
+│   │       └── libs
+│   │           └── font-awesome
+│   │               └── 6.4.0
+│   │                   ├── css
+│   │                   │   ├── all.min.css
+│   │                   │   └── fontawesome.min.css
+│   │                   └── webfonts
+│   │                       └── fa-solid-900.woff2
+│   ├── extensions.aitopia.ai
+│   │   └── extensions
+│   │       └── app
+│   │           └── get_key.html
+│   └── fonts.gstatic.com
+│       └── s
+│           └── poppins
+│               └── v24
+│                   ├── pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2
+│                   ├── pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2
+│                   └── pxiEyp8kv8JHgFVrJJfecg.woff2
+└── notes
+    └── prompt-ideas
+
+95 directories, 667 files
+```
