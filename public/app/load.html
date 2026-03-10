@@ -186,10 +186,18 @@
         b.style.display = "inline";
       }
 
+      function chn3() {
+        try {
+          window.location.href = "./index.html";
+        } catch (e) {
+          console.error("Navigation failed:", e);
+        }
+      }
       setTimeout(chn, 4000);
       setTimeout(chn1, 6000);
       setTimeout(chn2, 8000);
       setTimeout(chn3, 8000);
+      // setTimeout(chn4, 8001);
 
       function paste() {
         var a = document.getElementById("pst");
